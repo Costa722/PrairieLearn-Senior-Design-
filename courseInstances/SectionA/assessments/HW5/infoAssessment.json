@@ -1,0 +1,26 @@
+{
+    "uuid": "d25554ae-65d2-4db1-99a9-39e13b45c3b0",
+    "type": "Homework",
+    "title": "GPIO Introduction",
+    "set": "Homework",
+    "number": "5",
+    "allowAccess": [
+         {
+            "mode": "Public",
+            "credit": 100,
+            "startDate": "2023-10-14T00:00:01",
+            "endDate": "9999-04-01T23:59:59"
+        }
+    ],
+    "zones": [
+        {
+            "title": "Section 1",
+            "questions": [
+                {"id": "H5_Q1_New_Drawing", "points": 2,"maxPoints": 10},
+                {"id": "H5_Q2A", "points": 2,"maxPoints": 10},
+                {"id": "H5_Q2B", "points": 2,"maxPoints": 10},
+                {"id": "H5_Q3", "points": 2,"maxPoints": 10}
+            ]
+        }
+    ]
+}

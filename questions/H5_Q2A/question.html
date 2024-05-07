@@ -1,0 +1,88 @@
+<pl-question-panel>
+  <pl-drawing width="775" height ="350">
+    <pl-drawing-initial>
+        <pl-drawing-group visible="true">
+            <pl-rectangle x1="387.5" y1="200" width="775" height="400" color="#FFFFFF"></pl-rectangle>
+            <pl-rectangle x1="387.5" y1="100" width ="650" height="200" color="#FFFFFF"></pl-rectangle>
+            <!--Drawing all the text-->
+            <pl-text x1="225" y1="100" label="TM4C123 Microcontroller" latex="false" font-size="32"></pl-text>
+            <!--Left side text-->
+            <pl-text x1="80" y1="175" label="7" latex="false" font-size="20"></pl-text>
+            <pl-text x1="120" y1="175" label="6" latex="false" font-size="20"></pl-text>
+            <pl-text x1="160" y1="175" label="5" latex="false" font-size="20"></pl-text>
+            <pl-text x1="200" y1="175" label="4" latex="false" font-size="20"></pl-text>
+            <pl-text x1="240" y1="175" label="3" latex="false" font-size="20"></pl-text>
+            <pl-text x1="280" y1="175" label="2" latex="false" font-size="20"></pl-text>
+            <pl-text x1="320" y1="175" label="1" latex="false" font-size="20"></pl-text>
+            <pl-text x1="360" y1="175" label="0" latex="false" font-size="20"></pl-text>
+            <!--Right side text-->
+            <pl-text x1="400" y1="175" label="7" latex="false" font-size="20"></pl-text>
+            <pl-text x1="440" y1="175" label="6" latex="false" font-size="20"></pl-text>
+            <pl-text x1="480" y1="175" label="5" latex="false" font-size="20"></pl-text>
+            <pl-text x1="520" y1="175" label="4" latex="false" font-size="20"></pl-text>
+            <pl-text x1="560" y1="175" label="3" latex="false" font-size="20"></pl-text>
+            <pl-text x1="600" y1="175" label="2" latex="false" font-size="20"></pl-text>
+            <pl-text x1="640" y1="175" label="1" latex="false" font-size="20"></pl-text>
+            <pl-text x1="680" y1="175" label="0" latex="false" font-size="20"></pl-text>
+            <pl-text x1="5" y1="200" label="Port {{params.leftPortLabel}}" latex="false" font-size="20"></pl-text>
+            <pl-text x1="715" y1="200" label="Port {{params.rightPortLabel}}" latex="false" font-size="20"></pl-text>
+            <!--Drawing the arrows-->
+            <!--Left side arrows-->
+            <pl-vector x1="85" y1={{params.leftPortBitSeven_y1}} width="100" stroke-width="2" angle={{params.leftPortBitSeven_angle}} color="#000000"></pl-vector>
+            <pl-vector x1="125" y1={{params.leftPortBitSix_y1}} width="100" stroke-width="2" angle={{params.leftPortBitSix_angle}} color="#000000"></pl-vector>
+            <pl-vector x1="165" y1={{params.leftPortBitFive_y1}} width="100" stroke-width="2" angle={{params.leftPortBitFive_angle}} color="#000000"></pl-vector>
+            <pl-vector x1="205" y1={{params.leftPortBitFour_y1}} width="100" stroke-width="2" angle={{params.leftPortBitFour_angle}} color="#000000"></pl-vector>
+            <pl-vector x1="245" y1={{params.leftPortBitThree_y1}} width="100" stroke-width="2" angle={{params.leftPortBitThree_angle}} color="#000000"></pl-vector>
+            <pl-vector x1="285" y1={{params.leftPortBitTwo_y1}} width="100" stroke-width="2" angle={{params.leftPortBitTwo_angle}} color="#000000"></pl-vector>
+            <pl-vector x1="325" y1={{params.leftPortBitOne_y1}} width="100" stroke-width="2" angle={{params.leftPortBitOne_angle}} color="#000000"></pl-vector>
+            <pl-vector x1="365" y1={{params.leftPortBitZero_y1}} width="100" stroke-width="2" angle={{params.leftPortBitZero_angle}} color="#000000"></pl-vector>
+            <!--Right side arrows-->
+            <pl-vector x1="405" y1={{params.rightPortBitSeven_y1}} width="100" stroke-width="2" angle={{params.rightPortBitSeven_angle}} color="#000000"></pl-vector>
+            <pl-vector x1="445" y1={{params.rightPortBitSix_y1}} width="100" stroke-width="2" angle={{params.rightPortBitSix_angle}} color="#000000"></pl-vector>
+            <pl-vector x1="485" y1={{params.rightPortBitFive_y1}} width="100" stroke-width="2" angle={{params.rightPortBitFive_angle}} color="#000000"></pl-vector>
+            <pl-vector x1="525" y1={{params.rightPortBitFour_y1}} width="100" stroke-width="2" angle={{params.rightPortBitFour_angle}} color="#000000"></pl-vector>
+            <pl-vector x1="565" y1={{params.rightPortBitThree_y1}} width="100" stroke-width="2" angle={{params.rightPortBitThree_angle}} color="#000000"></pl-vector>
+            <pl-vector x1="605" y1={{params.rightPortBitTwo_y1}} width="100" stroke-width="2" angle={{params.rightPortBitTwo_angle}} color="#000000"></pl-vector>
+            <pl-vector x1="645" y1={{params.rightPortBitOne_y1}} width="100" stroke-width="2" angle={{params.rightPortBitOne_angle}} color="#000000"></pl-vector>
+            <pl-vector x1="685" y1={{params.rightPortBitZero_y1}} width="100" stroke-width="2" angle={{params.rightPortBitZero_angle}} color="#000000"></pl-vector>
+            <!--Drawing the Circles (Buttons and LED labels)-->
+            <!--Left port circles-->
+            <pl-circle x1={{params.leftCircleButtonZero_x1}} y1="320" radius="15" label="B0" offsetx="-14" offsety="-7.5" color="#FFFFFF"></pl-circle>
+            <pl-circle x1={{params.leftCircleButtonOne_x1}} y1="320" radius="15" label="B1" offsetx="-14" offsety="-7.5" color="#FFFFFF"></pl-circle>
+            <pl-circle x1={{params.leftCircleLEDZero_x1}} y1="320" radius="15" label="L0" offsetx="-14" offsety="-7.5" color="#FFFFFF"></pl-circle>
+            <pl-circle x1={{params.leftCircleLEDOne_x1}} y1="320" radius="15" label="L1" offsetx="-14" offsety="-7.5" color="#FFFFFF"></pl-circle>
+            <!--Right port circles-->
+            <pl-circle x1={{params.rightCircleButtonTwo_x1}} y1="320" radius="15" label="B2" offsetx="-14" offsety="-7.5" color="#FFFFFF"></pl-circle>
+            <pl-circle x1={{params.rightCircleButtonThree_x1}} y1="320" radius="15" label="B3" offsetx="-14" offsety="-7.5" color="#FFFFFF"></pl-circle>
+            <pl-circle x1={{params.rightCircleLEDTwo_x1}} y1="320" radius="15" label="L2" offsetx="-14" offsety="-7.5" color="#FFFFFF"></pl-circle>
+            <pl-circle x1={{params.rightCircleLEDThree_x1}} y1="320" radius="15" label="L3" offsetx="-14" offsety="-7.5" color="#FFFFFF"></pl-circle>
+        </pl-drawing-group>
+    </pl-drawing-initial>
+</pl-drawing>
+</pl-question-panel>
+<br>
+<pl-question-panel>
+    <p>Complete the function init_ports based on the comments and figure below to configure Port {{params.leftPortLabel}} and
+       Port {{params.rightPortLabel}}, while preserving the other Ports' configuration.</p>
+</pl-question-panel>
+<pl-file-editor
+    file-name="student.c"
+    ace-mode="ace/mode/c_cpp">
+#include "/grade/tests/main.c" //Used to compile code for auto-grading
+/*
+* Registers have been initialized for you as uint32_t types.
+*/
+
+void init_ports(void)
+{
+    //YOUR CODE HERE; // Start Port {{params.leftPortLabel}} and Port {{params.rightPortLabel}} clock
+    //YOUR CODE HERE; // Enable Digital functionality of Port {{params.leftPortLabel}} and Port {{params.rightPortLabel}}
+    //YOUR CODE HERE; // Set direction of Port {{params.leftPortLabel}}'s pins, based on the figure
+    //YOUR CODE HERE; // Set direction of Port {{params.rightPortLabel}}'s pins, based on the figure
+}
+</pl-file-editor>
+
+<pl-submission-panel>
+    <pl-external-grader-results></pl-external-grader-results>
+    <pl-file-preview></pl-file-preview>
+</pl-submission-panel>

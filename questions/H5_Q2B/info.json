@@ -1,0 +1,19 @@
+{
+    "uuid": "0b9ed6c1-7bb6-4571-98ec-8b92b74edee2",
+    "title": "Homework 5 Question 2B",
+    "topic": "Template",
+    "type": "v3",
+    "tags": [
+        "mwest",
+        "fa23",
+        "ccosta22",
+        "weberski"
+    ],
+    "gradingMethod": "External",
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-c",
+        "timeout": 100,
+        "entrypoint": "python3 /grade/tests/tests.py"
+    }
+}

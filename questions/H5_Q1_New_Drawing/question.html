@@ -1,0 +1,321 @@
+<pl-question-panel>
+  <pre>
+    Below is a drawing of a diagram that shows the connections between multiplexers 
+    associated <b>Port {{params.port}}'s</b> Alternative Function Select <b>(AFSEL)</b> register, 
+    Port Control <b>(PCTL)</b> register, and Port {{params.port}} <b>GPIO_DATA register</b>. 
+
+    Follow the path of the red arrows to fill out the I/O, GPIO_PORT_PCTL, and 
+    GPIO_PORT_AFSEL for each wire for the given port. Use the Datasheet to help 
+    you complete the missing pieces of the table.
+</pre>
+</pl-question-panel>
+
+
+<pl-question-panel>
+  <pl-drawing width="775" height="700" grid-size="0">
+    <pl-drawing-initial>
+      <!--GPIO_PORTA_PCTL-->
+      <pl-text x1="145" y1="20" label="GPIO_PORT{{params.port}}_PCTL (32-bits)" latex="false" font-size="15"></pl-text>
+      <pl-rectangle x1="100" y1="50" width="40" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="140" y1="50" width="40" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="180" y1="50" width="40" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="220" y1="50" width="40" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="260" y1="50" width="40" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="300" y1="50" width="40" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="340" y1="50" width="40" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="380" y1="50" width="40" height="20" color="#FDFEFE"></pl-rectangle>
+
+      <!--GPIO_PORTA_AFSEL-->
+      <pl-text x1="507" y1="20" label="GPIO_PORT{{params.port}}_AFSEL (8-bits)" latex="false" font-size="15"></pl-text>
+      <pl-rectangle x1="515" y1="50" width="25" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="540" y1="50" width="25" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="565" y1="50" width="25" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="590" y1="50" width="25" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="615" y1="50" width="25" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="640" y1="50" width="25" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="665" y1="50" width="25" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="690" y1="50" width="25" height="20" color="#FDFEFE"></pl-rectangle>
+
+      <!--GPIO_PORTA_DATA-->
+      <pl-text x1="412" y1="680" label="GPIO_PORT{{params.port}}_DATA (8-bits)" latex="false" font-size="15"></pl-text>
+      <pl-rectangle x1="420" y1="670" width="25" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="445" y1="670" width="25" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="470" y1="670" width="25" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="495" y1="670" width="25" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="520" y1="670" width="25" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="545" y1="670" width="25" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="570" y1="670" width="25" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="595" y1="670" width="25" height="20" color="#FDFEFE"></pl-rectangle>
+
+      <!--GPIO_PORTA_PCTL Multiplexers-->
+      <pl-polygon
+        plist='[{"x": 90, "y": 90}, {"x": 110, "y": 105}, {"x": 110, "y": 125}, {"x": 90, "y":140}]'></pl-polygon>
+      <pl-polygon
+        plist='[{"x": 130, "y": 165}, {"x": 150, "y": 180}, {"x": 150, "y": 200}, {"x": 130, "y":215}]'></pl-polygon>
+      <pl-polygon
+        plist='[{"x": 170, "y": 240}, {"x": 190, "y": 255}, {"x": 190, "y": 275}, {"x": 170, "y":290}]'></pl-polygon>
+      <pl-polygon
+        plist='[{"x": 210, "y": 315}, {"x": 230, "y": 330}, {"x": 230, "y": 350}, {"x": 210, "y":365}]'></pl-polygon>
+      <pl-polygon
+        plist='[{"x": 250, "y": 390}, {"x": 270, "y": 405}, {"x": 270, "y": 425}, {"x": 250, "y":440}]'></pl-polygon>
+      <pl-polygon
+        plist='[{"x": 290, "y": 465}, {"x": 310, "y": 480}, {"x": 310, "y": 500}, {"x": 290, "y":515}]'></pl-polygon>
+      <pl-polygon
+        plist='[{"x": 330, "y": 540}, {"x": 350, "y": 555}, {"x": 350, "y": 575}, {"x": 330, "y":590}]'></pl-polygon>
+      <pl-polygon
+        plist='[{"x": 370, "y": 615}, {"x": 390, "y": 630}, {"x": 390, "y": 650}, {"x": 370, "y":665}]'></pl-polygon>
+
+      <!--GPIO_PORTA_DATA/AFSEL Multiplexers-->
+      <pl-polygon
+        plist='[{"x": 505, "y": 80}, {"x": 520, "y": 95}, {"x": 520, "y": 115}, {"x": 505, "y":130}]'></pl-polygon>
+      <pl-polygon
+        plist='[{"x": 530, "y": 155}, {"x": 545, "y": 170}, {"x": 545, "y": 190}, {"x": 530, "y":205}]'></pl-polygon>
+      <pl-polygon
+        plist='[{"x": 555, "y": 230}, {"x": 570, "y": 245}, {"x": 570, "y": 265}, {"x": 555, "y":280}]'></pl-polygon>
+      <pl-polygon
+        plist='[{"x": 580, "y": 305}, {"x": 595, "y": 320}, {"x": 595, "y": 340}, {"x": 580, "y":355}]'></pl-polygon>
+      <pl-polygon
+        plist='[{"x": 605, "y": 380}, {"x": 620, "y": 395}, {"x": 620, "y": 415}, {"x": 605, "y":430}]'></pl-polygon>
+      <pl-polygon
+        plist='[{"x": 630, "y": 455}, {"x": 645, "y": 470}, {"x": 646, "y": 490}, {"x": 630, "y":505}]'></pl-polygon>
+      <pl-polygon
+        plist='[{"x": 655, "y": 530}, {"x": 670, "y": 545}, {"x": 670, "y": 565}, {"x": 655, "y":580}]'></pl-polygon>
+      <pl-polygon
+        plist='[{"x": 680, "y": 605}, {"x": 695, "y": 620}, {"x": 695, "y": 645}, {"x": 680, "y":660}]'></pl-polygon>
+
+      <!--Left-Side Inputs-->
+      <!-- <pl-text x1="30" y1="120" label="Hello" latex="false" font-size="15"></pl-text> -->
+      <pl-rectangle x1="30" y1="105" width="50" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="30" y1="130" width="50" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="30" y1="180" width="50" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="30" y1="205" width="50" height="20" color="#FDFEFE"></pl-rectangle>
+
+      <pl-rectangle x1="30" y1="255" width="50" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="30" y1="280" width="50" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="30" y1="330" width="50" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="30" y1="355" width="50" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="30" y1="405" width="50" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="30" y1="430" width="50" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="30" y1="480" width="50" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="30" y1="505" width="50" height="20" color="#FDFEFE"></pl-rectangle>
+
+      <pl-rectangle x1="30" y1="555" width="50" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="30" y1="580" width="50" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="30" y1="630" width="50" height="20" color="#FDFEFE"></pl-rectangle>
+      <pl-rectangle x1="30" y1="655" width="50" height="20" color="#FDFEFE"></pl-rectangle>
+
+      <!--Arrows for input to MUX-->
+      <pl-vector x1="55" y1="105" width="30" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="red"></pl-vector>
+      <pl-vector x1="55" y1="130" width="30" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="{{params.ioW1}}"></pl-vector>
+      <pl-vector x1="55" y1="180" width="70" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="{{params.ioW2}}"></pl-vector>
+      <pl-vector x1="55" y1="205" width="70" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="{{params.ioW3}}"></pl-vector>
+      <pl-vector x1="55" y1="255" width="110" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="{{params.ioW4}}"></pl-vector>
+      <pl-vector x1="55" y1="280" width="110" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="{{params.ioW5}}"></pl-vector>
+      <pl-vector x1="55" y1="330" width="150" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="{{params.ioW6}}"></pl-vector>
+      <pl-vector x1="55" y1="355" width="150" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="{{params.ioW7}}"></pl-vector>
+      <pl-vector x1="55" y1="405" width="190" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="{{params.ioW8}}"></pl-vector>
+      <pl-vector x1="55" y1="430" width="190" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="{{params.ioW9}}"></pl-vector>
+      <pl-vector x1="55" y1="480" width="230" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="{{params.ioW10}}"></pl-vector>
+      <pl-vector x1="55" y1="505" width="230" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="{{params.ioW11}}"></pl-vector>
+      <pl-vector x1="55" y1="555" width="270" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="{{params.ioW12}}"></pl-vector>
+      <pl-vector x1="55" y1="580" width="270" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="{{params.ioW13}}"></pl-vector>
+      <pl-vector x1="55" y1="630" width="310" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="{{params.ioW14}}"></pl-vector>
+      <pl-vector x1="55" y1="655" width="310" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="{{params.ioW15}}"></pl-vector>
+
+      <!--Arrows for MUX to MUX-->
+      <pl-vector x1="110" y1="115" width="390" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="red"></pl-vector>
+      <pl-vector x1="150" y1="190" width="375" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-vector x1="190" y1="265" width="360" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-vector x1="230" y1="340" width="345" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-vector x1="270" y1="415" width="330" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-vector x1="310" y1="490" width="315" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-vector x1="350" y1="565" width="300" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-vector x1="390" y1="640" width="285" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+
+      <!--GPIO_PORTA_PCTL Arrows to Mux-->
+      <pl-vector x1="100" y1="60" width="35" angle="90" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-vector x1="140" y1="60" width="110" angle="90" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-vector x1="180" y1="60" width="185" angle="90" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-vector x1="220" y1="60" width="260" angle="90" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-vector x1="260" y1="60" width="335" angle="90" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-vector x1="300" y1="60" width="410" angle="90" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-vector x1="340" y1="60" width="485" angle="90" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-vector x1="380" y1="60" width="560" angle="90" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+
+      <!--GPIO_PORTA_AFSEL Arrows to Mux-->
+      <pl-vector x1="515" y1="60" width="25" angle="90" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-vector x1="540" y1="60" width="100" angle="90" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-vector x1="565" y1="60" width="175" angle="90" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-vector x1="590" y1="60" width="250" angle="90" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-vector x1="615" y1="60" width="325" angle="90" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-vector x1="640" y1="60" width="400" angle="90" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-vector x1="665" y1="60" width="475" angle="90" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-vector x1="690" y1="60" width="550" angle="90" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+
+      <!--Output Arrows-->
+      <pl-vector x1="520" y1="105" width="250" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="red"></pl-vector>
+      <pl-text x1="695" y1="85" label="PORT {{params.port}} Wire 0" latex="false" font-size="12"></pl-text>
+      <pl-vector x1="545" y1="180" width="225" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="red"></pl-vector>
+      <pl-text x1="695" y1="160" label="PORT {{params.port}} Wire 1" latex="false" font-size="12"></pl-text>
+      <pl-vector x1="570" y1="255" width="200" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="red"></pl-vector>
+      <pl-text x1="695" y1="235" label="PORT {{params.port}} Wire 2" latex="false" font-size="12"></pl-text>
+      <pl-vector x1="595" y1="330" width="175" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="red"></pl-vector>
+      <pl-text x1="695" y1="310" label="PORT {{params.port}} Wire 3" latex="false" font-size="12"></pl-text>
+      <pl-vector x1="620" y1="405" width="150" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="red"></pl-vector>
+      <pl-text x1="695" y1="385" label="PORT {{params.port}} Wire 4" latex="false" font-size="12"></pl-text>
+      <pl-vector x1="645" y1="480" width="125" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="red"></pl-vector>
+      <pl-text x1="695" y1="460" label="PORT {{params.port}} Wire 5" latex="false" font-size="12"></pl-text>
+      <pl-vector x1="670" y1="555" width="100" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="red"></pl-vector>
+      <pl-text x1="695" y1="535" label="PORT {{params.port}} Wire 6" latex="false" font-size="12"></pl-text>
+      <pl-vector x1="695" y1="630" width="75" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="red"></pl-vector>
+      <pl-text x1="695" y1="610" label="PORT {{params.port}} Wire 7" latex="false" font-size="12"></pl-text>
+
+      <!--Data to Mux Arrows-->
+      <pl-line x1="420" x2="420" y1="100" y2="660"></pl-line>
+      <pl-vector x1="420" y1="100" width="80" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-line x1="445" x2="445" y1="175" y2="660"></pl-line>
+      <pl-vector x1="445" y1="175" width="80" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-line x1="470" x2="470" y1="250" y2="660"></pl-line>
+      <pl-vector x1="470" y1="250" width="80" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-line x1="495" x2="495" y1="325" y2="660"></pl-line>
+      <pl-vector x1="495" y1="325" width="80" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-line x1="520" x2="520" y1="400" y2="660"></pl-line>
+      <pl-vector x1="520" y1="400" width="80" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-line x1="545" x2="545" y1="475" y2="660"></pl-line>
+      <pl-vector x1="545" y1="475" width="80" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-line x1="570" x2="570" y1="550" y2="660"></pl-line>
+      <pl-vector x1="570" y1="550" width="80" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+      <pl-line x1="595" x2="595" y1="625" y2="660"></pl-line>
+      <pl-vector x1="595" y1="625" width="80" angle="0" arrow-head-length=".75" stroke-width="2"
+        color="black"></pl-vector>
+    </pl-drawing-initial>
+</pl-question-panel>
+<br>
+<table>
+  <tr>
+    <td>
+      <P>Port {{params.a}} Wire 0 <pl-string-input answers_name="io0" allow-blank="true" label="I/O"
+          size="5"></pl-string-input>
+        <pl-string-input answers_name="pmc0" allow-blank="true" label="PMC0 =" size="5"></pl-string-input>
+        <pl-string-input answers_name="bit0" allow-blank="true" label="AFSEL bit 0 =" size="5"></pl-string-input>
+      </P>
+  </tr>
+  <tr>
+    <td>
+      <P>Port {{params.a}} Wire 1 <pl-string-input answers_name="io1" allow-blank="true" label="I/O"
+          size="5"></pl-string-input>
+        <pl-string-input answers_name="pmc1" allow-blank="true" label="PMC1 =" size="5"></pl-string-input>
+        <pl-string-input answers_name="bit1" allow-blank="true" label="AFSEL bit 1 =" size="5"></pl-string-input>
+      </P>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <P>Port {{params.a}} Wire 2 <pl-string-input answers_name="io2" allow-blank="true" label="I/O"
+          size="5"></pl-string-input>
+        <pl-string-input answers_name="pmc2" allow-blank="true" label="PMC2 =" size="5"></pl-string-input>
+        <pl-string-input answers_name="bit2" allow-blank="true" label="AFSEL bit 2 =" size="5"></pl-string-input>
+      </P>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <P>Port {{params.a}} Wire 3 <pl-string-input answers_name="io3" allow-blank="true" label="I/O"
+          size="5"></pl-string-input>
+        <pl-string-input answers_name="pmc3" allow-blank="true" label="PMC3 =" size="5"></pl-string-input>
+        <pl-string-input answers_name="bit3" allow-blank="true" label="AFSEL bit 3 =" size="5"></pl-string-input>
+      </P>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <P>Port {{params.a}} Wire 4 <pl-string-input answers_name="io4" allow-blank="true" label="I/O"
+          size="5"></pl-string-input>
+        <pl-string-input answers_name="pmc4" allow-blank="true" label="PMC4 =" size="5"></pl-string-input>
+        <pl-string-input answers_name="bit4" allow-blank="true" label="AFSEL bit 4 =" size="5"></pl-string-input>
+      </P>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <P>Port {{params.a}} Wire 5 <pl-string-input answers_name="io5" allow-blank="true" label="I/O"
+          size="5"></pl-string-input>
+        <pl-string-input answers_name="pmc5" allow-blank="true" label="PMC5 =" size="5"></pl-string-input>
+        <pl-string-input answers_name="bit5" allow-blank="true" label="AFSEL bit 5 =" size="5"></pl-string-input>
+      </P>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <P>Port {{params.a}} Wire 6 <pl-string-input answers_name="io6" allow-blank="true" label="I/O"
+          size="5"></pl-string-input>
+        <pl-string-input answers_name="pmc6" allow-blank="true" label="PMC6 =" size="5"></pl-string-input>
+        <pl-string-input answers_name="bit6" allow-blank="true" label="AFSEL bit 6 =" size="5"></pl-string-input>
+      </P>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <P>Port {{params.a}} Wire 7 <pl-string-input answers_name="io7" allow-blank="true" label="I/O"
+          size="5"></pl-string-input>
+        <pl-string-input answers_name="pmc7" allow-blank="true" label="PMC7 =" size="5"></pl-string-input>
+        <pl-string-input answers_name="bit7" allow-blank="true" label="AFSEL bit 7=" size="5"></pl-string-input>
+      </P>
+    </td>
+  </tr>
+</table>
